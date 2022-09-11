@@ -1,3 +1,4 @@
+require("dotenv").config()
 const Discord = require("discord.js")
 const { Client, GatewayIntentBits } = require('discord.js');
 var XMLHttpRequest = require('xhr2');
@@ -107,5 +108,4 @@ const mySecret = process.env['token']
         }
     }
 })
-
 client.login(process.env.token)
