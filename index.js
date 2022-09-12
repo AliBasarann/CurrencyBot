@@ -1,6 +1,7 @@
 require("dotenv").config()
 const Discord = require("discord.js")
 const { Client, GatewayIntentBits } = require('discord.js');
+const keepAlive = require ("./server")
 var XMLHttpRequest = require('xhr2');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
@@ -108,4 +109,5 @@ const mySecret = process.env['token']
         }
     }
 })
+keepAlive()
 client.login(process.env.token)
